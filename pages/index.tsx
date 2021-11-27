@@ -15,8 +15,6 @@ const Home: NextPage = () => {
     <TopLayout>
       <Stack
         mt="2rem"    
-        backdropFilter="blur(10px)"
-        bg="rgba(255, 255, 255, 0.5)"
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 8, md: 10 }}

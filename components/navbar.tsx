@@ -39,7 +39,9 @@ export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box  bg="rgba(0, 0, 0, .15)"  backdropFilter="saturate(180%) blur(15px)" px={4} position="fixed" top="0" left="0" width="100%" zIndex="2">
+      <Box  
+      shadow="md"
+        backdropFilter="saturate(180%) blur(15px)" px={4} position="fixed" top="0" left="0" width="100%" zIndex="2">
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box as="a" href="/">
             <Logo h="36px" />
