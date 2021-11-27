@@ -20,19 +20,6 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import Logo from './images/logo';
 
-const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
 
 export default function NavBar() {
   const { colorMode, toggleColorMode } = useColorMode();

@@ -50,13 +50,9 @@ interface Props {
 }
 
 const CoursePage:FC<Props> = ({course}) => {
-  const {title, sys, image, lessonsCollection} = course
+  const {title, lessonsCollection} = course
   return (
-    <PageLayout>
-        <BackButton />
-        <Text as="h1" fontSize="36px" fontWeight={800} margin="auto">
-          {title}
-        </Text>
+    <PageLayout title={title}>
         <Flex justifyContent="center" flexWrap="wrap">        
           {lessonsCollection.items.map((l:Lesson, i: number) => <MainCard key={i} title={l.title} slug={`/lessons/${l.sys.id}`} image={l.image?.url} index={i+1} /> )} 
         </Flex>

@@ -1,5 +1,9 @@
-import { Container } from '@chakra-ui/layout'
-import {FC} from 'react'
+import { 
+    Container,
+    Text,
+ } from '@chakra-ui/react'
+import React, {FC} from 'react'
+import BackButton from './backButton'
 import NavBar from './navbar'
 
 /**
@@ -17,11 +21,18 @@ const TopLayout: FC = ({children}) =>  {
 /**
  * @description layout for the app page  
  */
-const PageLayout: FC = ({children}) =>  {
+interface Props {
+    title?:string
+}
+const PageLayout: FC<Props> = ({title, children}) =>  {
     return (
         <>
             <NavBar />
             <Container pt="70px" maxW={'8xl'} textAlign="center">
+                <BackButton />
+                <Text as="h1" fontSize="36px" fontWeight={800} margin="auto" textTransform="capitalize">
+                {title}
+                </Text>
                 {children}
             </Container>
         </>

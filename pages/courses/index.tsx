@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import {
     Spinner,
     Flex,
+    Text,
 } from '@chakra-ui/react'
 import MainCard from '../../components/card'
 import { PageLayout } from '../../components/layout'
@@ -46,7 +47,7 @@ export interface Course {
 const Index:FC =  () => {
     const {loading, error, courses} = useCourses()
     return (
-        <PageLayout>
+        <PageLayout title="Courses">
             {loading && <Spinner />}
             {error && JSON.stringify(error)}
             <Flex justifyContent="center" flexWrap="wrap">
