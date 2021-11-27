@@ -6,6 +6,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import type { NextPage } from 'next'
+import { Blur } from '../components/blur';
 import HeroImage from '../components/images/heroImage';
 import { TopLayout } from '../components/layout';
 
@@ -13,6 +14,9 @@ const Home: NextPage = () => {
   return (
     <TopLayout>
       <Stack
+        mt="2rem"    
+        backdropFilter="blur(10px)"
+        bg="rgba(255, 255, 255, 0.5)"
         textAlign={'center'}
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -43,8 +47,15 @@ const Home: NextPage = () => {
         </Stack>
         <Flex w={'full'}>
           <HeroImage
-            height={{ sm: '24rem', lg: '28rem' }}
+            height={{ sm: '20rem', lg: '20rem' }}
           />
+          <Blur
+          position={'absolute'}
+          bottom={"0px"}
+          right={"0px"}
+          zIndex="-1"
+          style={{  filter: 'blur(100px)' }}
+        />
         </Flex>
       </Stack>
     </TopLayout>
