@@ -42,8 +42,8 @@ const Stepper:FC<Props> = ({steps}) => {
                             pb={{base:"80px", md:"80px"}}
                             textAlign={{base:"start", md:"center"}}
                         >
-                            <Text fontSize="30px" fontWeight="bold" >{s.label}</Text>
-                            <Text fontSize="30px" fontWeight="bold" color="orange">
+                            <Text fontSize={{base:"1.5em",md:"30px"}} fontWeight="bold" >{s.label}</Text>
+                            <Text fontSize={{base:"1.4em",md:"30px"}} fontWeight="bold" color="orange">
                                 {s.content}
                             </Text>
                             <Flex position="absolute" bottom="0"  left ="0px" w="100%" pb="30px" px="40px">
@@ -52,7 +52,7 @@ const Stepper:FC<Props> = ({steps}) => {
                                         setCurrStep(currStep-1)
                                         setIsNext(false)
                                     }}>
-                                        <ArrowBackIcon /> 前へ
+                                        <ArrowBackIcon /> Back
                                     </Button>
                                 }
                                 {currStep !== steps.length -1 &&
@@ -60,14 +60,12 @@ const Stepper:FC<Props> = ({steps}) => {
                                         setCurrStep(currStep+1)
                                         setIsNext(true)
                                     }}>
-                                        次へ <ArrowForwardIcon />
+                                        Next <ArrowForwardIcon />
                                     </Button>
                                 }
                                 {currStep === steps.length -1 &&
-                                    <Button ml="auto" variant="primary" borderRadius="full" onClick={() => {
-                                        console.log("add product to cart");
-                                    }}>
-                                        カートに追加する 
+                                    <Button ml="auto" variant="primary" borderRadius="full" onClick={() => history.back()}>
+                                        Back to Courses
                                     </Button>
                                 }
                             </Flex>

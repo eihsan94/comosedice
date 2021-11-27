@@ -62,7 +62,7 @@ const LessonPage:FC<Props> = ({lesson}) => {
     content: 
       <Box key={i}>
         {show === l.sys.id && <Text>{l.answer}</Text>}
-      <Button my="20px" onClick={() => setShow(l.sys.id)} borderRadius="full" variant="accentTop">
+        <Button onClick={() => setShow(l.sys.id)} borderRadius="full" bg="orange" fontWeight="normal" color="white" position="absolute" top="0" right="0">
           show answer
         </Button>
       </Box>

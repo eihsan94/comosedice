@@ -22,14 +22,14 @@ import { FC } from 'react';
       
     return (
         <Box
-          m={12} 
+          mt={12} 
             w="330px" 
             _notLast={{
             mr:{base:"0px",md:"24px"},
           }}
           transition="all .3s"
           _hover={{
-              transform: "scale(1.1)"
+              md:"transform: scale(1.1)"
           }}
           as="a"
           href={slug}
