@@ -68,12 +68,8 @@ const LessonPage:FC<Props> = ({lesson}) => {
       </Box>
   }))
   return (
-    <PageLayout>
+    <PageLayout title={title}>
       <Container textAlign="center">
-        <BackButton />
-        <Text as="h1" fontSize="36px" fontWeight={800}>
-          {title}
-        </Text>
         <Stepper steps={steps} />
       </Container>
     </PageLayout>
