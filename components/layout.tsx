@@ -28,7 +28,7 @@ const PageLayout: FC<Props> = ({title, children}) =>  {
     return (
         <>
             <NavBar />
-            <Container pt="70px" maxW={'8xl'} textAlign="center">
+            <Container py="80px" maxW={'8xl'} textAlign="center">
                 <BackButton />
                 <Text as="h1" fontSize="36px" fontWeight={800} margin="auto" textTransform="capitalize">
                 {title}
