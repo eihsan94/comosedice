@@ -21,4 +21,6 @@
 - add the seoheader in app.tsx
 - begin coding
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## REFERENCE
+
+1. The [contentful graphql explorer](https://graphql.contentful.com/content/v1/spaces/armhp4e2swvx/explore?access_token=kckhQjvyOdX8Yun2FQdaiUr-5l1MRt3AAHSY3D1cQoM)
