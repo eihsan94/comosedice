@@ -46,6 +46,8 @@ export interface Course {
 
 const Index:FC =  () => {
     const {loading, error, courses} = useCourses()
+    console.log(courses);
+    
     return (
         <PageLayout title="Courses">
             {loading && <Spinner />}
